@@ -1,0 +1,29 @@
+《核境造物》网页兼容改造测试报告
+
+测试日期：2026-07-20
+测试对象：用户上传的 game(1).zip 完整 Pygame 源码
+
+一、已通过项目
+1. 全项目 Python 语法编译检查通过。
+2. NuclearGame 初始化通过。
+3. 五阶段 LevelManager 配置读取通过。
+4. 菜单页及主界面绘制通过。
+5. 异步主循环连续运行 5 帧并正常退出。
+6. Pygbag 标准入口 main.py 存在。
+7. 手机触摸事件已接入 FINGERDOWN/FINGERMOTION/FINGERUP。
+8. 浏览器端已跳过 openpyxl/Excel 依赖，使用 story_plain.py。
+9. 网页端存档目录已切换为 /data/核境造物。
+10. 网页端背景音乐已准备 OGG 格式。
+11. GitHub Pages 自动构建与部署工作流文件齐全。
+12. 中文字体自动下载与子集化脚本语法检查通过。
+
+二、环境限制
+当前执行环境无法直接从 PyPI 下载 Pygbag，因此未在本地生成 build/web 和 web.zip。
+源码中已加入 GitHub Actions 自动构建流程；上传到 GitHub 后，由云端安装 Pygbag、生成中文字体子集并发布 Pages。
+
+三、实际发布前建议复测
+1. 安卓微信/Chrome 横屏触摸拖拽。
+2. iPhone Safari 横屏触摸拖拽与声音解锁。
+3. 首次加载速度和弱网情况。
+4. 浏览器刷新后节点存档是否保留。
+5. 所有中文是否完整显示。
